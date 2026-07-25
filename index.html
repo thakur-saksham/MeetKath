@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kath</title>
+    <style>
+        /* Reset margins so the iframes take up the whole screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #07050f; /* Match the dark theme background */
+        }
+        
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* By default show desktop, hide mobile */
+        .desktop-view { display: block; }
+        .mobile-view { display: none; }
+
+        /* On screens 768px or smaller, hide desktop, show mobile */
+        @media (max-width: 768px) {
+            .desktop-view { display: none; }
+            .mobile-view { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+      We use iframes here because merging two large HTML files 
+      (with duplicate IDs, conflicting CSS variables, and duplicate JS logic) 
+      would break the layout and animations of both.
+    -->
+    <iframe class="desktop-view" src="meetkath.html" title="Desktop View"></iframe>
+    <iframe class="mobile-view" src="mobile.html" title="Mobile View"></iframe>
+</body>
+</html>
