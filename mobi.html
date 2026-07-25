@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kath.</title>
+<meta name="theme-color" content="#07050f">
+<script>
+  // Route to the right experience before anything paints.
+  // Same 768px breakpoint used by both meetkath.html and mobile.html,
+  // so all three files agree on where "mobile" starts.
+  (function () {
+    var target = (window.innerWidth <= 768) ? 'mobile.html' : 'meetkath.html';
+    window.location.replace(target);
+  })();
+</script>
+<noscript>
+  <meta http-equiv="refresh" content="0; url=meetkath.html">
+</noscript>
+<style>
+  html,body{margin:0;height:100%;background:#07050f;}
+  .fallback{
+    display:flex;align-items:center;justify-content:center;height:100%;
+    font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:22px;
+    color:#f5ede9;letter-spacing:.02em;
+  }
+  .fallback .dot{color:#ff3d8a;font-style:normal;}
+</style>
+</head>
+<body>
+  <!-- Shown only for the instant before the script above redirects, or if JS is off/blocked -->
+  <div class="fallback">kath<span class="dot">.</span></div>
+  <noscript>
+    <p style="text-align:center;font-family:sans-serif;color:#a89bb0;">
+      JavaScript is off, so we can't auto-detect your device —
+      <a href="meetkath.html" style="color:#ff8fc0;">continue to the desktop site</a>
+      or <a href="mobile.html" style="color:#ff8fc0;">the mobile site</a>.
+    </p>
+  </noscript>
+</body>
+</html>
