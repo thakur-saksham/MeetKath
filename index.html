@@ -57,40 +57,124 @@
     }
     </script>
     <style>
-        /* Reset margins so the iframes take up the whole screen */
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            background-color: #07050f; /* Match the dark theme background */
+            background-color: #07050f;
         }
         
         iframe {
             border: none;
             width: 100%;
             height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
         }
         
-        /* By default show desktop, hide mobile */
-        .desktop-view { display: block; }
-        .mobile-view { display: none; }
+        /* Skeleton Loader Styles */
+        .skeleton-wrapper {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: #07050f;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            transition: opacity 0.5s ease;
+        }
+        .skeleton-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            animation: skeleton-pulse 1.5s infinite ease-in-out;
+        }
+        @keyframes skeleton-pulse {
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
+        .skeleton-nav {
+            width: calc(100% - 40px);
+            max-width: 1200px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+            margin-bottom: 25vh;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .skeleton-logo { width: 80px; height: 24px; border-radius: 12px; }
+        .skeleton-nav-links { width: 180px; height: 24px; border-radius: 12px; }
+        .skeleton-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+        }
+        .skeleton-eyebrow { width: 120px; height: 12px; border-radius: 6px; }
+        .skeleton-h1 { width: 60%; max-width: 500px; height: 60px; border-radius: 16px; }
+        .skeleton-h1.short { width: 40%; max-width: 350px; }
+        .skeleton-sub { width: 250px; height: 14px; border-radius: 7px; margin-top: 15px; }
 
-        /* On screens 768px or smaller, hide desktop, show mobile */
         @media (max-width: 768px) {
-            .desktop-view { display: none; }
-            .mobile-view { display: block; }
+            .skeleton-nav { margin-bottom: 20vh; height: 50px; }
+            .skeleton-nav-links { display: none; }
+            .skeleton-h1 { height: 45px; width: 80%; }
+            .skeleton-h1.short { width: 60%; }
         }
     </style>
 </head>
 <body>
-    <!-- 
-      We use iframes here because merging two large HTML files 
-      (with duplicate IDs, conflicting CSS variables, and duplicate JS logic) 
-      would break the layout and animations of both.
-    -->
-    <iframe class="desktop-view" src="meetkath.html" title="Desktop View"></iframe>
-    <iframe class="mobile-view" src="mobile.html" title="Mobile View"></iframe>
+    <!-- Premium Skeleton Loader Screen -->
+    <div id="skeleton-loader" class="skeleton-wrapper">
+        <div class="skeleton-nav">
+            <div class="skeleton-box skeleton-logo"></div>
+            <div class="skeleton-box skeleton-nav-links"></div>
+        </div>
+        <div class="skeleton-hero">
+            <div class="skeleton-box skeleton-eyebrow"></div>
+            <div class="skeleton-box skeleton-h1"></div>
+            <div class="skeleton-box skeleton-h1 short"></div>
+            <div class="skeleton-box skeleton-sub"></div>
+        </div>
+    </div>
+
+    <!-- Dynamic Smart Loader -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Detect if the user is on mobile
+            const isMobile = window.innerWidth <= 768;
+            
+            // 2. Select the correct lightweight HTML file
+            const iframeSrc = isMobile ? 'mobile.html' : 'meetkath.html';
+            
+            // 3. Create the iframe dynamically
+            const iframe = document.createElement('iframe');
+            iframe.src = iframeSrc;
+            iframe.title = isMobile ? 'Mobile View' : 'Desktop View';
+            
+            // 4. Listen for when the site finishes downloading
+            iframe.onload = () => {
+                const loader = document.getElementById('skeleton-loader');
+                if (loader) {
+                    // Smoothly fade out the skeleton loader
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.remove(), 500);
+                }
+            };
+            
+            // 5. Append to the page to start downloading
+            document.body.appendChild(iframe);
+        });
+    </script>
 </body>
 </html>
