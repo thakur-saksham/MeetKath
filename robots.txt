@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thakur-saksham.github.io/MeetKath/sitemap.xml
+Sitemap: https://meetkath.in/sitemap.xml
