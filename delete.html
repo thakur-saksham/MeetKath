@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Delete Your Account - Kath</title>
 <meta name="description" content="How to delete your Kath account and what happens to your data when you do.">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#07050f;--rose:#ff3d8a;--rose-soft:#ff8fc0;
@@ -30,7 +32,7 @@ a{color:inherit;}
 
 .blob{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0;}
 
-.wrap{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:0 32px;}
+.wrap{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 32px;}
 
 /* top bar — same convention as privacy.html / terms.html */
 .topbar{display:flex;align-items:center;justify-content:space-between;padding:40px 32px 0;max-width:1120px;margin:0 auto;position:relative;z-index:3;}
@@ -147,8 +149,8 @@ ol.steps li:hover .num{box-shadow:0 0 14px rgba(255,61,138,.45);background:rgba(
 .body-copy+.body-copy{margin-top:14px;}
 .body-copy b{color:var(--rose-soft);font-weight:500;}
 
-.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:60px;}
-.three-col .card{padding:28px;}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:60px;}
+.three-col .card{padding:32px;}
 ul.checklist{list-style:none;}
 ul.checklist li{display:flex;gap:11px;align-items:flex-start;padding:6px 0;font-size:13.5px;color:var(--cream);line-height:1.5;}
 ul.checklist li svg{flex-shrink:0;margin-top:2px;width:15px;height:15px;stroke:var(--rose-soft);fill:none;stroke-width:1.8;}
@@ -174,8 +176,8 @@ ul.checklist li svg{flex-shrink:0;margin-top:2px;width:15px;height:15px;stroke:v
 .btn-pill:hover{background:var(--rose);border-color:var(--rose);}
 
 /* footer — same component as the main site */
-footer{padding:30px 0 46px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;
-  font-family:var(--mono);font-size:10px;color:var(--fog);letter-spacing:.06em;border-top:1px solid rgba(245,237,233,.06);}
+footer{padding:40px 0 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;
+  font-family:var(--sans);font-size:13.5px;color:var(--fog);border-top:1px solid rgba(245,237,233,.06);}
 .footer-left{flex:1;min-width:180px;}
 .footer-social{display:flex;gap:14px;}
 .footer-social a{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;
@@ -205,8 +207,10 @@ footer{padding:30px 0 46px;display:flex;align-items:center;justify-content:space
 
 <div class="grain"></div>
 <div class="cg" id="cg"></div>
-<div class="blob" style="width:520px;height:520px;top:-14%;left:-14%;background:radial-gradient(circle,var(--rose),transparent 70%);opacity:.16;"></div>
-<div class="blob" style="width:560px;height:560px;bottom:-18%;right:-12%;background:radial-gradient(circle,var(--violet),transparent 70%);opacity:.22;"></div>
+<div style="position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0;">
+  <div class="blob" style="width:520px;height:520px;top:-14%;left:-14%;background:radial-gradient(circle,var(--rose),transparent 70%);opacity:.16;"></div>
+  <div class="blob" style="width:560px;height:560px;bottom:-18%;right:-12%;background:radial-gradient(circle,var(--violet),transparent 70%);opacity:.22;"></div>
+</div>
 
 <div class="topbar">
   <a href="meetkath.html" class="back-btn">
