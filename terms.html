@@ -21,6 +21,22 @@ ul { padding-left: 20px; }
 a { color: var(--rose); text-decoration: none; }
 a:hover { text-decoration: underline; }
 .back-btn { font-family: var(--mono); color: var(--gold); text-decoration: none; text-transform: uppercase; font-size: 12px; margin-bottom: 30px; display: inline-block; }
+footer{padding:40px 0 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;
+  font-family:var(--sans);font-size:13.5px;color:var(--fog);border-top:1px solid rgba(245,237,233,.06);margin-top:60px;}
+.footer-left{flex:1;min-width:180px;}
+.footer-social{display:flex;gap:14px;}
+.footer-social a{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;
+  border:1px solid rgba(245,237,233,.12);color:var(--fog);text-decoration:none;transition:all .25s;}
+.footer-social a:hover{color:var(--cream);border-color:rgba(245,237,233,.3);background:rgba(245,237,233,.04);}
+.footer-social svg{width:13px;height:13px;fill:currentColor;}
+.footer-right{display:flex;gap:22px;flex:1;justify-content:flex-end;min-width:180px;}
+.footer-right a{color:var(--fog);text-decoration:none;transition:color .25s;display:inline-flex;align-items:center;gap:5px;}
+.footer-right a:hover{color:var(--cream);}
+.footer-right .spk{color:var(--rose-soft);font-size:10px;}
+@media(max-width:900px){
+  .footer-left,.footer-right{justify-content:center;text-align:center;min-width:0;}
+  footer{flex-direction:column;text-align:center;}
+}
 </style>
 </head>
 <body>
@@ -110,6 +126,21 @@ a:hover { text-decoration: underline; }
 
     <h2>Contact</h2>
     <p>Questions about these Terms?<br>Email: <a href="mailto:meetkathh@gmail.com">meetkathh@gmail.com</a></p>
+
+    <footer>
+      <div class="footer-left">© 2026 Kath. All rights reserved.</div>
+      <div class="footer-social">
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-8.38 4.482A13.942 13.942 0 011.671 3.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 19.54a13.94 13.94 0 007.548 2.212c9.057 0 14.01-7.504 14.01-14.01 0-.213-.005-.425-.014-.636A10.012 10.012 0 0024 4.557z"/></svg></a>
+        <a href="https://www.instagram.com/meet.kath?igsh=MTExZjY0eHIzYzBoMw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="#" aria-label="Play Store"><svg viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg></a>
+      </div>
+      <div class="footer-right">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/delete">Delete Account</a>
+        <a href="mailto:meetkathh@gmail.com">Contact <span class="spk" style="color:var(--rose-soft);font-size:10px;">💕</span></a>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
