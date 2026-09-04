@@ -744,7 +744,21 @@ footer{position:absolute;bottom:24px;left:0;right:0;display:flex;align-items:cen
   .focus-card .fc-overlay{opacity:1;background:linear-gradient(to top,rgba(7,5,15,.92),rgba(7,5,15,.5) 60%,transparent);}
   .focus-card .fc-body{transform:none;}
 }
+
+/* UI EFFECTS ADDED */
+.p-card, .mr-card, .ft-card, .plan-row, .cf-item { position: relative; overflow: hidden; }
+.p-card::before, .mr-card::before, .ft-card::before, .plan-row::before, .cf-item::before {
+  content: ''; position: absolute; top: var(--my, -1000px); left: var(--mx, -1000px);
+  width: 0px; height: 0px; background: radial-gradient(circle closest-side, rgba(255, 61, 138, 0.12), transparent);
+  transform: translate(-50%, -50%); pointer-events: none; z-index: 0; transition: width 0.3s, height 0.3s;
+}
+.p-card:hover::before, .mr-card:hover::before, .ft-card:hover::before, .plan-row:hover::before, .cf-item:hover::before {
+  width: 350px; height: 350px;
+}
+.p-card > *, .mr-card > *, .ft-card > *, .plan-row > *, .cf-item > * { position: relative; z-index: 1; }
+[data-magnetic] { transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s, border-color 0.3s; }
 </style>
+
 
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -762,7 +776,7 @@ footer{position:absolute;bottom:24px;left:0;right:0;display:flex;align-items:cen
   <span class="nav-logo">kath<span class="ndot">.</span></span>
   <div class="nav-right">
     <div class="nav-links"><a href="#pricing">Pricing</a></div>
-    <a class="nav-cta" href="#" data-open-enquiry><span class="spk">✦</span>Join waitlist</a>
+    <a class="nav-cta" data-magnetic href="#" data-open-enquiry><span class="spk">✦</span>Join waitlist</a>
   </div>
 </nav>
 
@@ -789,7 +803,7 @@ footer{position:absolute;bottom:24px;left:0;right:0;display:flex;align-items:cen
     <span class="ha-title">Perfect Stranger</span>
     <span class="ha-wave"><span></span><span></span><span></span><span></span><span></span><span></span></span>
   </div>
-  <a class="hero-watch" href="#companion"><span class="hw-play">▶</span>Watch kath in action</a>
+  <a class="hero-watch" data-magnetic href="#companion"><span class="hw-play">▶</span>Watch kath in action</a>
 </section>
 
 <!-- MINDREAD ("AI reads between the lines") -->
@@ -1032,7 +1046,7 @@ footer{position:absolute;bottom:24px;left:0;right:0;display:flex;align-items:cen
           <li><svg class="pli-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>Chat &amp; connect</li>
           <li><svg class="pli-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>Cancel anytime</li>
         </ul>
-        <button type="button" class="plan-btn plan-btn-outline" data-open-enquiry data-plan="Free Trial (1 Day) – ₹0">Start Free Trial</button>
+        <button type="button" class="plan-btn plan-btn-outline" data-magnetic data-open-enquiry data-plan="Free Trial (1 Day) – ₹0">Start Free Trial</button>
       </div>
 
       <div class="plan-card plan-card-popular">
@@ -1049,7 +1063,7 @@ footer{position:absolute;bottom:24px;left:0;right:0;display:flex;align-items:cen
           <li><svg class="pli-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>Chat &amp; connect</li>
           <li><svg class="pli-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>Cancel anytime</li>
         </ul>
-        <button type="button" class="plan-btn plan-btn-fill" data-open-enquiry data-plan="1 Week (7 Days) – ₹349">Choose 1 Week</button>
+        <button type="button" class="plan-btn plan-btn-fill" data-magnetic data-open-enquiry data-plan="1 Week (7 Days) – ₹349">Choose 1 Week</button>
       </div>
 
       <div class="plan-card">
@@ -1067,7 +1081,7 @@ footer{position:absolute;bottom:24px;left:0;right:0;display:flex;align-items:cen
           <li><svg class="pli-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>Better matches</li>
           <li><svg class="pli-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>Deeper connections</li>
         </ul>
-        <button type="button" class="plan-btn plan-btn-outline" data-open-enquiry data-plan="a custom plan">Choose Your Plan</button>
+        <button type="button" class="plan-btn plan-btn-outline" data-magnetic data-open-enquiry data-plan="a custom plan">Choose Your Plan</button>
       </div>
 
     </div>
@@ -1183,7 +1197,7 @@ footer{position:absolute;bottom:24px;left:0;right:0;display:flex;align-items:cen
         <span class="mf-sparkle">✦</span>
       </label>
 
-      <button type="submit" class="mf-submit">
+      <button type="submit" class="mf-submit" data-magnetic>
         <svg viewBox="0 0 24 24"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4z"></path></svg>
         Send Enquiry
       </button>

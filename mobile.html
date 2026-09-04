@@ -175,7 +175,21 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;color:var(--cream);letter-spac
   border-radius:100px;background:linear-gradient(90deg,var(--rose),var(--purple));color:#fff;text-decoration:none;
   font-family:var(--pop);font-weight:500;font-size:14.5px;box-shadow:0 16px 40px rgba(255,61,138,.4);min-height:54px;}
 .sticky-cta a:active{transform:scale(.96);}
+
+/* UI EFFECTS ADDED */
+.p-card, .mr-card, .ft-card, .plan-row, .cf-item { position: relative; overflow: hidden; }
+.p-card::before, .mr-card::before, .ft-card::before, .plan-row::before, .cf-item::before {
+  content: ''; position: absolute; top: var(--my, -1000px); left: var(--mx, -1000px);
+  width: 0px; height: 0px; background: radial-gradient(circle closest-side, rgba(255, 61, 138, 0.12), transparent);
+  transform: translate(-50%, -50%); pointer-events: none; z-index: 0; transition: width 0.3s, height 0.3s;
+}
+.p-card:hover::before, .mr-card:hover::before, .ft-card:hover::before, .plan-row:hover::before, .cf-item:hover::before {
+  width: 350px; height: 350px;
+}
+.p-card > *, .mr-card > *, .ft-card > *, .plan-row > *, .cf-item > * { position: relative; z-index: 1; }
+[data-magnetic] { transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s, border-color 0.3s; }
 </style>
+
 
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -739,7 +753,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;color:var(--cream);letter-spac
         <li><svg class="pli-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>AI-powered matches</li>
         <li><svg class="pli-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>Cancel anytime</li>
       </ul>
-      <button type="button" class="plan-btn plan-btn-outline" data-open-enquiry data-plan="Free Trial (1 Day) – ₹0">Start Free Trial</button>
+      <button type="button" class="plan-btn plan-btn-outline" data-magnetic data-open-enquiry data-plan="Free Trial (1 Day) – ₹0">Start Free Trial</button>
     </div>
 
     <div class="plan-card plan-card-popular reveal">
@@ -755,7 +769,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;color:var(--cream);letter-spac
         <li><svg class="pli-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>AI-powered matches</li>
         <li><svg class="pli-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>Cancel anytime</li>
       </ul>
-      <button type="button" class="plan-btn plan-btn-fill" data-open-enquiry data-plan="1 Week (7 Days) – ₹349">Choose 1 Week</button>
+      <button type="button" class="plan-btn plan-btn-fill" data-magnetic data-open-enquiry data-plan="1 Week (7 Days) – ₹349">Choose 1 Week</button>
     </div>
 
     <div class="plan-card reveal">
@@ -772,7 +786,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;color:var(--cream);letter-spac
         <li><svg class="pli-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>Priority support</li>
         <li><svg class="pli-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>Deeper connections</li>
       </ul>
-      <button type="button" class="plan-btn plan-btn-outline" data-open-enquiry data-plan="a custom plan">Choose Your Plan</button>
+      <button type="button" class="plan-btn plan-btn-outline" data-magnetic data-open-enquiry data-plan="a custom plan">Choose Your Plan</button>
     </div>
   </div>
 
@@ -874,7 +888,7 @@ footer{position:relative;z-index:2;display:flex;flex-direction:column;align-item
     <p class="closer-sub">No bios. No photos. Just message the way you already do.</p>
   </div>
   <div class="closer-action reveal" id="closerAction">
-    <a class="closer-btn" href="#" data-open-enquiry>Join the Waitlist</a>
+    <a class="closer-btn" data-magnetic href="#" data-open-enquiry>Join the Waitlist</a>
   </div>
   <div class="closer-features">
     <div class="cf-item reveal">
@@ -1002,7 +1016,7 @@ body.modal-open{overflow:hidden;height:100vh;}
         <textarea name="message" placeholder="How can we help you?" rows="3"></textarea>
       </label>
 
-      <button type="submit" class="mf-submit"><svg viewBox="0 0 24 24"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4z"></path></svg>Send Enquiry</button>
+      <button type="submit" class="mf-submit" data-magnetic><svg viewBox="0 0 24 24"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4z"></path></svg>Send Enquiry</button>
       <div class="mf-safe"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"></path><path d="M9 12l2 2 4-4"></path></svg>Your information is safe with us.</div>
     </form>
 
