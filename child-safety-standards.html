@@ -1,31 +1,31 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Terms & Conditions - Kath</title>
-<meta name="description" content="Kath's terms and conditions of use.">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Child Safety Standards - Kath</title>
+<meta name="description" content="Kath has a strict, zero-tolerance policy against child sexual abuse and exploitation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#07050f;--rose:#ff3d8a;--rose-soft:#ff8fc0;
-  --gold:#ffc24b;--fog:#6b7280;--cream:#f5ede9;--dim:#a89bb0;--violet:#5a2a8f;
+  --gold:#ffc24b;--fog:#6b7280;--cream:#f5ede9;--dim:#a89bb0;
+  --violet:#5a2a8f;
   --serif:'Fraunces',serif;--sans:'Inter',sans-serif;--mono:'IBM Plex Mono',monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-html{background:var(--ink);scroll-behavior:smooth;overflow-y:visible;}
-body{background:var(--ink);color:var(--cream);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-y:visible;width:100%;position:relative;line-height:1.6;}
+html{background:var(--ink);scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;}
 ::selection{background:var(--rose);color:var(--ink);}
-a{color:inherit;}
-@media(prefers-reduced-motion:reduce){ *{animation:none!important;transition:none!important;} html{scroll-behavior:auto;} }
 
 .grain{position:fixed;inset:0;pointer-events:none;z-index:9000;opacity:.04;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
-.cg{position:fixed;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(255,61,138,.08),transparent 70%);pointer-events:none;z-index:1;transform:translate(-50%,-50%);will-change:transform;}
+.cg{position:fixed;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(255,61,138,.07),transparent 70%);pointer-events:none;z-index:1;transform:translate(-50%,-50%);will-change:transform;}
+.progress{position:fixed;top:0;left:0;height:2px;background:var(--rose-soft);z-index:9001;width:0%;box-shadow:0 0 10px rgba(255,143,192,.5);}
 .blob{position:fixed;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0;}
-.progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--rose),var(--gold));z-index:9500;width:0%;transition:width .1s linear;}
-
-.wrap{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:0 32px;}
+.wrap{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:0 32px;}
 
 .topbar{display:flex;align-items:center;justify-content:space-between;padding:40px 32px 0;max-width:1120px;margin:0 auto;position:relative;z-index:3;}
 .back-btn{font-family:var(--mono);color:var(--gold);text-decoration:none;text-transform:uppercase;font-size:12px;letter-spacing:.08em;display:inline-flex;align-items:center;gap:7px;}
@@ -124,138 +124,75 @@ footer .spk{color:var(--rose-soft);font-size:10px;}
 
 <main class="wrap">
   <section class="hero reveal">
-    <span class="eyebrow"><span class="spk">✦</span><span class="eline"></span>policies<span class="eline"></span><span class="spk">✦</span></span>
-    <h1 class="title">Terms &amp; <em>Conditions</em></h1>
-    <div class="updated">Last updated: July 2026</div>
-    <p class="lead">Welcome to Kath. By accessing or using Kath, you agree to these Terms and Conditions.</p>
+    <span class="eyebrow"><span class="spk">✦</span><span class="eline"></span>safety first<span class="eline"></span><span class="spk">✦</span></span>
+    <h1 class="title">Child Safety <em>Standards</em></h1>
+    <div class="updated">Effective Date: September 4, 2026</div>
+    <p class="lead">Kath has a strict, zero-tolerance policy against child sexual abuse and exploitation (CSAE) in any form. Kath is designed and intended for use exclusively by adults aged 18 and older.</p>
     <div class="rule"></div>
   </section>
 
   <div class="layout">
     <nav class="toc reveal">
       <div class="toc-label">On this page</div>
-      <a href="#eligibility">1. Eligibility</a>
-      <a href="#account-responsibility">2. Account Responsibility</a>
-      <a href="#acceptable-use">3. Acceptable Use</a>
-      <a href="#ai-responses">4. AI Responses</a>
-      <a href="#matching">5. Matching</a>
-      <a href="#payments">6. Payments</a>
-      <a href="#refund-policy">7. Refund Policy</a>
-      <a href="#intellectual-property">8. Intellectual Property</a>
-      <a href="#account-termination">9. Account Termination</a>
-      <a href="#limitation-of-liability">10. Limitation of Liability</a>
-      <a href="#changes-to-terms">11. Changes to Terms</a>
+      <a href="#zero-tolerance">1. Zero Tolerance Policy</a>
+      <a href="#prohibited-conduct">2. Prohibited Conduct</a>
+      <a href="#reporting-mechanism">3. Reporting Mechanism</a>
+      <a href="#response">4. Response to Reports</a>
+      <a href="#compliance">5. Compliance</a>
       <a href="#contact">Contact</a>
     </nav>
 
     <div class="content reveal">
 
-      <section class="doc-section" id="eligibility">
-        <div class="sec-head"><span class="num">1</span><h2>Eligibility</h2></div>
-        <p>You must be at least 18 years old to use Kath.</p>
+      <section class="doc-section" id="zero-tolerance">
+        <div class="sec-head"><span class="num">1</span><h2>Zero Tolerance Policy</h2></div>
+        <p>Kath has a strict, zero-tolerance policy against child sexual abuse and exploitation (CSAE) in any form, including but not limited to grooming, sextortion, trafficking, or any sexual exploitation of a minor. Kath is designed and intended for use exclusively by adults aged 18 and older, as stated in our Terms of Service.</p>
+        <p>Any user found to be engaging in, facilitating, promoting, or attempting CSAE on Kath will have their account immediately and permanently terminated, and their conduct may be reported to the appropriate law enforcement and child protection authorities.</p>
       </section>
 
-      <section class="doc-section" id="account-responsibility">
-        <div class="sec-head"><span class="num">2</span><h2>Account Responsibility</h2></div>
-        <p>You are responsible for:</p>
+      <section class="doc-section" id="prohibited-conduct">
+        <div class="sec-head"><span class="num">2</span><h2>Prohibited Content and Conduct</h2></div>
+        <p>The following are explicitly and strictly prohibited on Kath:</p>
         <ul>
-          <li>Keeping your account secure</li>
-          <li>Providing accurate information</li>
-          <li>Maintaining confidentiality of your login credentials</li>
+          <li>Any child sexual abuse material (CSAM), in any form, including photos, videos, or computer-generated imagery.</li>
+          <li>Grooming or attempting to groom a minor for sexual exploitation.</li>
+          <li>Soliciting, sharing, or requesting sexual content involving a minor.</li>
+          <li>Sextortion or coercion of a minor.</li>
+          <li>Trafficking or facilitating the trafficking of a minor.</li>
+          <li>Any other content or conduct that sexually exploits, abuses, or endangers a child.</li>
         </ul>
       </section>
 
-      <section class="doc-section" id="acceptable-use">
-        <div class="sec-head"><span class="num">3</span><h2>Acceptable Use</h2></div>
-        <p>You agree not to:</p>
-        <ul>
-          <li>Harass or abuse other users</li>
-          <li>Share illegal content</li>
-          <li>Impersonate others</li>
-          <li>Upload malicious software</li>
-          <li>Spam users</li>
-          <li>Attempt unauthorized access to our systems</li>
-        </ul>
-        <p>Violation of these rules may result in account suspension or termination.</p>
+      <section class="doc-section" id="reporting-mechanism">
+        <div class="sec-head"><span class="num">3</span><h2>Reporting Mechanism</h2></div>
+        <p>Kath provides an in-app reporting mechanism that allows any user to report a conversation or another user directly within the app. Reporting a conversation immediately ends the chat, blocks the reported user, and flags the report for review by our team.</p>
+        <p>Anyone — including non-users — who becomes aware of suspected CSAE or CSAM connected to Kath may also report it by emailing <a href="mailto:meetkathh@gmail.com" class="inline">meetkathh@gmail.com</a> with the subject line "Child Safety Report."</p>
       </section>
 
-      <section class="doc-section" id="ai-responses">
-        <div class="sec-head"><span class="num">4</span><h2>AI Responses</h2></div>
-        <p>Kath AI provides conversational assistance and compatibility insights. AI-generated responses may occasionally be inaccurate or incomplete and should not be considered professional advice.</p>
-      </section>
-
-      <section class="doc-section" id="matching">
-        <div class="sec-head"><span class="num">5</span><h2>Matching</h2></div>
-        <p>Kath aims to improve meaningful connections through AI. We do not guarantee:</p>
+      <section class="doc-section" id="response">
+        <div class="sec-head"><span class="num">4</span><h2>Our Response to Reports</h2></div>
+        <p>Upon obtaining actual knowledge of CSAM or CSAE on our platform, Kath will:</p>
         <ul>
-          <li>Successful matches</li>
-          <li>Relationships</li>
-          <li>Friendships</li>
-          <li>Compatibility</li>
-          <li>User responses</li>
+          <li>Immediately remove the offending content and terminate the responsible account.</li>
+          <li>Preserve relevant records as required for law enforcement cooperation.</li>
+          <li>Report confirmed CSAM to the relevant national authorities, including India's National Cyber Crime Reporting Portal / NCMEC, as applicable, in accordance with applicable law.</li>
         </ul>
       </section>
 
-      <section class="doc-section" id="payments">
-        <div class="sec-head"><span class="num">6</span><h2>Payments</h2></div>
-        <p>Premium subscriptions may include:</p>
-        <ul>
-          <li>1-Day Trial</li>
-          <li>1 Week</li>
-          <li>15 Days</li>
-          <li>1 Month</li>
-          <li>6 Months</li>
-        </ul>
-        <p>Prices may change in the future.</p>
-      </section>
-
-      <section class="doc-section" id="refund-policy">
-        <div class="sec-head"><span class="num">7</span><h2>Refund Policy</h2></div>
-        <p>Subscription payments are generally non-refundable unless required by applicable law or explicitly stated otherwise.</p>
-      </section>
-
-      <section class="doc-section" id="intellectual-property">
-        <div class="sec-head"><span class="num">8</span><h2>Intellectual Property</h2></div>
-        <p>All content including:</p>
-        <ul>
-          <li>Kath branding</li>
-          <li>Logos</li>
-          <li>AI technology</li>
-          <li>Designs</li>
-          <li>Source code</li>
-          <li>Graphics</li>
-        </ul>
-        <p>remain the property of Kath.</p>
-      </section>
-
-      <section class="doc-section" id="account-termination">
-        <div class="sec-head"><span class="num">9</span><h2>Account Termination</h2></div>
-        <p>We reserve the right to suspend or terminate accounts that violate these Terms.</p>
-      </section>
-
-      <section class="doc-section" id="limitation-of-liability">
-        <div class="sec-head"><span class="num">10</span><h2>Limitation of Liability</h2></div>
-        <p>Kath is provided "as is." We are not responsible for:</p>
-        <ul>
-          <li>Lost opportunities</li>
-          <li>Emotional outcomes</li>
-          <li>Relationship success or failure</li>
-          <li>Service interruptions</li>
-          <li>User-generated content</li>
-        </ul>
-      </section>
-
-      <section class="doc-section" id="changes-to-terms">
-        <div class="sec-head"><span class="num">11</span><h2>Changes to Terms</h2></div>
-        <p>We may update these Terms periodically. Continued use of Kath constitutes acceptance of any updated Terms.</p>
+      <section class="doc-section" id="compliance">
+        <div class="sec-head"><span class="num">5</span><h2>Compliance</h2></div>
+        <p>Kath complies with all applicable child safety laws and regulations. We cooperate fully with law enforcement and child protection agencies in investigations related to child safety.</p>
       </section>
 
       <section class="doc-section" id="contact" style="border-bottom:none;">
-        <div class="sec-head"><span class="num">✦</span><h2>Contact</h2></div>
-        <p style="margin-bottom:20px;">Questions about these Terms? Reach out any time.</p>
+        <div class="sec-head"><span class="num">✦</span><h2>Contact Us</h2></div>
+        <p style="margin-bottom:20px;">Our designated child safety points of contact can be reached at:</p>
         <div class="contact-panel">
-          <p>Email us directly and we'll get back to you.</p>
-          <a href="mailto:meetkathh@gmail.com" class="btn-pill"><span class="spk">✦</span>meetkathh@gmail.com</a>
+          <p>Email:</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="mailto:meetkathh@gmail.com" class="btn-pill"><span class="spk">✦</span>meetkathh@gmail.com</a>
+            <a href="mailto:uttamthakur8923@gmail.com" class="btn-pill"><span class="spk">✦</span>uttamthakur8923@gmail.com</a>
+          </div>
         </div>
       </section>
 
@@ -268,41 +205,47 @@ footer .spk{color:var(--rose-soft);font-size:10px;}
     <div>© 2026 Kath. All rights reserved.</div>
     <div class="flinks">
       <a href="/privacy" target="_parent">Privacy</a>
-      <a href="/terms" target="_parent" class="current">Terms</a>
-        <a href="/child-safety-standards" target="_parent">Child Safety</a>
+      <a href="/terms" target="_parent">Terms</a>
+      <a href="/child-safety-standards" target="_parent" class="current">Child Safety</a>
       <a href="/delete" target="_parent">Delete Account</a>
-      <a href="mailto:meetkathh@gmail.com">Contact <span class="spk">💕</span></a>
+      <a href="mailto:meetkathh@gmail.com">Contact <span class="spk">✦</span></a>
     </div>
   </footer>
 </div>
 
 <script>
   const cg = document.getElementById('cg');
-  window.addEventListener('mousemove', e => { cg.style.left = e.clientX + 'px'; cg.style.top = e.clientY + 'px'; });
+  window.addEventListener('mousemove', e => {
+    cg.style.left = e.clientX + 'px';
+    cg.style.top = e.clientY + 'px';
+  });
 
-  const progress = document.getElementById('progress');
+  const prog = document.getElementById('progress');
   window.addEventListener('scroll', () => {
-    const h = document.documentElement;
-    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
-    progress.style.width = pct + '%';
+    const w = window.scrollY;
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.width = (w / h * 100) + '%';
   });
 
   const io = new IntersectionObserver(entries => {
-    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    entries.forEach(en => {
+      if(en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
   }, { threshold: .1 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   const sections = document.querySelectorAll('.doc-section');
-  const tocLinks = document.querySelectorAll('.toc a');
-  const secIO = new IntersectionObserver(entries => {
+  const navLinks = document.querySelectorAll('.toc a');
+  const spy = new IntersectionObserver(entries => {
     entries.forEach(en => {
-      const link = document.querySelector(`.toc a[href="#${en.target.id}"]`);
-      if (!link) return;
-      if (en.isIntersecting) { tocLinks.forEach(l => l.classList.remove('active')); link.classList.add('active'); }
+      if(en.isIntersecting){
+        navLinks.forEach(a => a.classList.remove('active'));
+        const activeLink = document.querySelector(`.toc a[href="#${en.target.id}"]`);
+        if(activeLink) activeLink.classList.add('active');
+      }
     });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => secIO.observe(s));
+  }, { rootMargin: '-20% 0px -75% 0px' });
+  sections.forEach(s => spy.observe(s));
 </script>
-
 </body>
 </html>
